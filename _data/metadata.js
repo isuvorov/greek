@@ -1,5 +1,5 @@
 export default {
-  title: "Learn Greek",
+  title: "Learn 🇬🇷 with me",
   url: "https://greek.isuvorov.com/",
   language: "en",
   description: "I am writing about my experiences as a naval navel-gazer.",

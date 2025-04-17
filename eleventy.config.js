@@ -1,8 +1,8 @@
 import {
-	IdAttributePlugin,
-	InputPathToUrlTransformPlugin,
-	HtmlBasePlugin,
-	EleventyRenderPlugin,
+  IdAttributePlugin,
+  InputPathToUrlTransformPlugin,
+  HtmlBasePlugin,
+  EleventyRenderPlugin,
 } from "@11ty/eleventy";
 
 import { feedPlugin } from "@11ty/eleventy-plugin-rss";
@@ -28,8 +28,6 @@ export default async function (eleventyConfig) {
       "./public/": "/",
     })
     .addPassthroughCopy("./content/feed/pretty-atom-feed.xsl");
-
-  eleventyConfig.addPassthroughCopy("./content/CNAME");
 
   // Run Eleventy when these files change:
   // https://www.11ty.dev/docs/watch-serve/#add-your-own-watch-targets
@@ -67,7 +65,7 @@ export default async function (eleventyConfig) {
     },
     collection: {
       name: "posts",
-      limit: 10,
+      limit: 50,
     },
     metadata: {
       language: "en",

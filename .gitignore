@@ -1,4 +1,6 @@
+__*
 _site/
 node_modules/
 package-lock.json
 .cache
+scripts/sync.sh

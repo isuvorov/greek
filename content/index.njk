@@ -11,9 +11,21 @@ const numberOfLatestPostsToShow = 30;
 {% renderTemplate "md" %}
 # Калимэра Мир 👋
 
-Меня зовут Игорь, и я учу гречески. В этом блоге я буду делиться всеми материалами, которые мне помогли.
+
+<div style="display: flex; align-items: center; justify-content: space-between;">
+  <div>
+	Меня зовут Игорь, я программист-предприниматель.
+
+	Живу на 🇨🇾 Кипре  и учу 🇬🇷 Греческий язык. 
+
+	В этом блоге я буду делиться материалами, которые мне помогли.
+  </div>
+  <img src="/blog/isuvorov.png" alt="Avatar" style="width: 200px; border-radius: 50%; margin-left: 20px;">
+</div>
 
 {% endrenderTemplate %}
+{# {% renderFile "content/blog/welcome.md" %} #}
+
 
 {# {% include "content/_index.md" %} #}
 {# {% render "_index.md" %} #}
