@@ -4,11 +4,23 @@ const eleventyNavigation = {
 	order: 1
 };
 
-const numberOfLatestPostsToShow = 3;
+const numberOfLatestPostsToShow = 30;
 ---
+
+
+{% renderTemplate "md" %}
+# Калимэра Мир 👋
+
+Меня зовут Игорь, и я учу гречески. В этом блоге я буду делиться всеми материалами, которые мне помогли.
+
+{% endrenderTemplate %}
+
+{# {% include "content/_index.md" %} #}
+{# {% render "_index.md" %} #}
+
 {% set postsCount = collections.posts | length %}
 {% set latestPostsCount = postsCount | min(numberOfLatestPostsToShow) %}
-<h1>Latest {{ latestPostsCount }} Post{% if latestPostsCount != 1 %}s{% endif %}</h1>
+<h1>Последние {{ latestPostsCount }} пост{% if latestPostsCount != 1 %}ов{% endif %}</h1>
 
 {% set postslist = collections.posts | head(-1 * numberOfLatestPostsToShow) %}
 {% set postslistCounter = postsCount %}
