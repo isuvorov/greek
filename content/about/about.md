@@ -15,5 +15,5 @@ eleventyNavigation:
 
 	В этом блоге я буду делиться материалами, которые мне помогли.
   </div>
-  <img src="/blog/isuvorov.png" alt="Avatar" style="width: 200px; border-radius: 50%; margin-left: 20px;">
+  <img src="/isuvorov.png" alt="Avatar" style="width: 200px; border-radius: 50%; margin-left: 20px;">
 </div>
