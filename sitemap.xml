@@ -2,12 +2,47 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
 	
 	<url>
+		<loc>https://greek.isuvorov.com/blog/lists/activity/</loc>
+		<lastmod>2025-04-15</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://greek.isuvorov.com/blog/lists/animals/</loc>
+		<lastmod>2025-04-15</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://greek.isuvorov.com/blog/lists/astronomy/</loc>
+		<lastmod>2025-04-15</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://greek.isuvorov.com/blog/lists/clothing/</loc>
+		<lastmod>2025-04-15</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://greek.isuvorov.com/blog/lists/dates/</loc>
+		<lastmod>2025-04-15</lastmod>
+	</url>
+	
+	<url>
 		<loc>https://greek.isuvorov.com/blog/lists/colors/</loc>
 		<lastmod>2025-04-17</lastmod>
 	</url>
 	
 	<url>
+		<loc>https://greek.isuvorov.com/blog/lists/conjunctions/</loc>
+		<lastmod>2025-04-17</lastmod>
+	</url>
+	
+	<url>
 		<loc>https://greek.isuvorov.com/blog/lists/languages/</loc>
+		<lastmod>2025-04-17</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://greek.isuvorov.com/blog/lists/questions/</loc>
 		<lastmod>2025-04-17</lastmod>
 	</url>
 	
@@ -27,52 +62,37 @@
 	</url>
 	
 	<url>
+		<loc>https://greek.isuvorov.com/blog/rules/article/</loc>
+		<lastmod>2025-04-22</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://greek.isuvorov.com/blog/pictures/pic1/</loc>
+		<lastmod>2025-04-24</lastmod>
+	</url>
+	
+	<url>
 		<loc>https://greek.isuvorov.com/about/</loc>
-		<lastmod>2025-04-17</lastmod>
+		<lastmod>2025-04-24</lastmod>
 	</url>
 	
 	<url>
 		<loc>https://greek.isuvorov.com/blog/</loc>
-		<lastmod>2025-04-17</lastmod>
+		<lastmod>2025-04-24</lastmod>
 	</url>
 	
 	<url>
 		<loc>https://greek.isuvorov.com/</loc>
-		<lastmod>2025-04-17</lastmod>
+		<lastmod>2025-04-24</lastmod>
 	</url>
 	
 	<url>
 		<loc>https://greek.isuvorov.com/tags/</loc>
-		<lastmod>2025-04-17</lastmod>
+		<lastmod>2025-04-24</lastmod>
 	</url>
 	
 	<url>
 		<loc>https://greek.isuvorov.com/feed/feed.xml</loc>
-		<lastmod>2025-04-17</lastmod>
-	</url>
-	
-	<url>
-		<loc>https://greek.isuvorov.com/blog/lists/activity/</loc>
-		<lastmod>2025-05-01</lastmod>
-	</url>
-	
-	<url>
-		<loc>https://greek.isuvorov.com/blog/lists/animals/</loc>
-		<lastmod>2025-05-01</lastmod>
-	</url>
-	
-	<url>
-		<loc>https://greek.isuvorov.com/blog/lists/astronomy/</loc>
-		<lastmod>2025-05-01</lastmod>
-	</url>
-	
-	<url>
-		<loc>https://greek.isuvorov.com/blog/lists/clothing/</loc>
-		<lastmod>2025-05-01</lastmod>
-	</url>
-	
-	<url>
-		<loc>https://greek.isuvorov.com/blog/lists/dates/</loc>
-		<lastmod>2025-05-01</lastmod>
+		<lastmod>2025-04-24</lastmod>
 	</url>
 </urlset>
