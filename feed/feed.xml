@@ -15,9 +15,9 @@
     <link href="https://example.com/blog/pictures/pic1/" />
     <updated>2025-04-24T00:00:00Z</updated>
     <id>https://example.com/blog/pictures/pic1/</id>
-    <content type="html">&lt;p&gt;![[pic1.png]]&lt;/p&gt;
-&lt;p&gt;Описание картинки на греческом языке с переводом на русский.
-Источник: &lt;a href=&quot;https://www.youtube.com/watch?v=_qdhWXl8Ic0&quot;&gt;YouTube видео&lt;/a&gt;&lt;/p&gt;
+    <content type="html">&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://example.com/blog/pictures/pic1/SogSHrCbUJ-1470.avif 1470w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://example.com/blog/pictures/pic1/SogSHrCbUJ-1470.webp 1470w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://example.com/blog/pictures/pic1/SogSHrCbUJ-1470.png&quot; alt=&quot;Картинка 1&quot; style=&quot;width: 100%; max-width: 600px; border-radius: 10px; margin-top: 20px;&quot; width=&quot;1470&quot; height=&quot;990&quot;&gt;&lt;/picture&gt;
+&lt;p&gt;Описание картинки на греческом языке с переводом на русский.&lt;/p&gt;
+&lt;p&gt;Источник: &lt;a href=&quot;https://www.youtube.com/watch?v=_qdhWXl8Ic0&quot;&gt;YouTube видео&lt;/a&gt;&lt;/p&gt;
 &lt;h3 id=&quot;variant-1&quot;&gt;&lt;strong&gt;Вариант 1&lt;/strong&gt;&lt;/h3&gt;
 &lt;p&gt;&lt;strong&gt;Σε αυτή την εικόνα βλέπω τρεις νέες γυναίκες.&lt;/strong&gt;
 &lt;em&gt;На этой картинке я вижу трёх молодых женщин.&lt;/em&gt;&lt;/p&gt;
@@ -98,7 +98,7 @@
 &lt;p&gt;&lt;strong&gt;Η εικόνα είναι πολύ όμορφη και δείχνει μία χαρούμενη στιγμή.&lt;/strong&gt;
 &lt;em&gt;Картинка очень красивая и показывает радостный момент.&lt;/em&gt;&lt;/p&gt;
 &lt;hr&gt;
-&lt;p&gt;Source: https://www.youtube.com/watch?v=_qdhWXl8Ic0&lt;/p&gt;
+&lt;p&gt;Источник: &lt;a href=&quot;https://www.youtube.com/watch?v=_qdhWXl8Ic0&quot;&gt;YouTube видео&lt;/a&gt;&lt;/p&gt;
 </content>
   </entry>
   <entry>
