@@ -1,0 +1,1287 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Не правильный глаголы</title>
+    <meta name="description" content="I am writing about my experiences as a naval navel-gazer.">
+    <link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="Learn 🇬🇷 with me">
+    
+    <style>
+    /**
+ * okaidia theme for JavaScript, CSS and HTML
+ * Loosely based on Monokai textmate theme by http://www.monokai.nl/
+ * @author ocodia
+ */
+
+code[class*="language-"],
+pre[class*="language-"] {
+	color: #f8f8f2;
+	background: none;
+	text-shadow: 0 1px rgba(0, 0, 0, 0.3);
+	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+	font-size: 1em;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	word-wrap: normal;
+	line-height: 1.5;
+
+	-moz-tab-size: 4;
+	-o-tab-size: 4;
+	tab-size: 4;
+
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+	padding: 1em;
+	margin: .5em 0;
+	overflow: auto;
+	border-radius: 0.3em;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+	background: #272822;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+	padding: .1em;
+	border-radius: .3em;
+	white-space: normal;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+	color: #8292a2;
+}
+
+.token.punctuation {
+	color: #f8f8f2;
+}
+
+.token.namespace {
+	opacity: .7;
+}
+
+.token.property,
+.token.tag,
+.token.constant,
+.token.symbol,
+.token.deleted {
+	color: #f92672;
+}
+
+.token.boolean,
+.token.number {
+	color: #ae81ff;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+	color: #a6e22e;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string,
+.token.variable {
+	color: #f8f8f2;
+}
+
+.token.atrule,
+.token.attr-value,
+.token.function,
+.token.class-name {
+	color: #e6db74;
+}
+
+.token.keyword {
+	color: #66d9ef;
+}
+
+.token.regex,
+.token.important {
+	color: #fd971f;
+}
+
+.token.important,
+.token.bold {
+	font-weight: bold;
+}
+.token.italic {
+	font-style: italic;
+}
+
+.token.entity {
+	cursor: help;
+}
+/*
+ * New diff- syntax
+ */
+
+pre[class*="language-diff-"] {
+  --eleventy-code-padding: 1.25em;
+  padding-left: var(--eleventy-code-padding);
+  padding-right: var(--eleventy-code-padding);
+}
+.token.deleted {
+  background-color: hsl(0, 51%, 37%);
+  color: inherit;
+}
+.token.inserted {
+  background-color: hsl(126, 31%, 39%);
+  color: inherit;
+}
+
+/* Make the + and - characters unselectable for copy/paste */
+.token.prefix.unchanged,
+.token.prefix.inserted,
+.token.prefix.deleted {
+  -webkit-user-select: none;
+  user-select: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+.token.prefix.inserted,
+.token.prefix.deleted {
+  width: var(--eleventy-code-padding);
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+/* Optional: full-width background color */
+.token.inserted:not(.prefix),
+.token.deleted:not(.prefix) {
+  display: block;
+  margin-left: calc(-1 * var(--eleventy-code-padding));
+  margin-right: calc(-1 * var(--eleventy-code-padding));
+  text-decoration: none; /* override del, ins, mark defaults */
+  color: inherit; /* override del, ins, mark defaults */
+}
+/* This is an arbitrary CSS string added to the bundle */
+/* Defaults */
+:root {
+  --font-family: -apple-system, system-ui, sans-serif;
+  --font-family-monospace: Consolas, Menlo, Monaco, Andale Mono WT, Andale Mono,
+    Lucida Console, Lucida Sans Typewriter, DejaVu Sans Mono,
+    Bitstream Vera Sans Mono, Liberation Mono, Nimbus Mono L, Courier New,
+    Courier, monospace;
+}
+
+/* Theme colors */
+:root {
+  --color-gray-20: #e0e0e0;
+  --color-gray-50: #c0c0c0;
+  --color-gray-90: #333;
+
+  --background-color: #fff;
+
+  --text-color: var(--color-gray-90);
+  --text-color-link: #082840;
+  --text-color-link-active: #5f2b48;
+  --text-color-link-visited: #17050f;
+
+  --syntax-tab-size: 2;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-gray-20: #e0e0e0;
+    --color-gray-50: #c0c0c0;
+    --color-gray-90: #dad8d8;
+
+    /* --text-color is assigned to --color-gray-_ above */
+    --text-color-link: #1493fb;
+    --text-color-link-active: #6969f7;
+    --text-color-link-visited: #a6a6f8;
+
+    --background-color: #15202b;
+  }
+}
+
+/* Global stylesheet */
+* {
+  box-sizing: border-box;
+}
+
+@view-transition {
+  navigation: auto;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0 auto;
+  font-family: var(--font-family);
+  color: var(--text-color);
+  background-color: var(--background-color);
+}
+html {
+  overflow-y: scroll;
+}
+body {
+  max-width: 40em;
+}
+
+/* https://www.a11yproject.com/posts/how-to-hide-content/ */
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+/* Fluid images via https://www.zachleat.com/web/fluid-images/ */
+img {
+  max-width: 100%;
+}
+img[width][height] {
+  height: auto;
+}
+img[src$=".svg"] {
+  width: 100%;
+  height: auto;
+  max-width: none;
+}
+video,
+iframe {
+  width: 100%;
+  height: auto;
+}
+iframe {
+  aspect-ratio: 16/9;
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+p {
+  line-height: 1.5;
+}
+
+li {
+  line-height: 1.5;
+}
+
+a[href] {
+  color: var(--text-color-link);
+}
+a[href]:visited {
+  color: var(--text-color-link-visited);
+}
+a[href]:hover,
+a[href]:active {
+  color: var(--text-color-link-active);
+}
+
+main,
+footer {
+  padding: 1rem;
+}
+main :first-child {
+  margin-top: 0;
+}
+
+header {
+  border-bottom: 1px dashed var(--color-gray-20);
+}
+
+.links-nextprev {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5em 1em;
+  list-style: "";
+  border-top: 1px dashed var(--color-gray-20);
+  padding: 1em 0;
+}
+.links-nextprev > * {
+  flex-grow: 1;
+}
+.links-nextprev-next {
+  text-align: right;
+}
+
+table {
+  margin: 1em 0;
+}
+table td,
+table th {
+  padding-right: 1em;
+}
+
+pre,
+code {
+  font-family: var(--font-family-monospace);
+}
+pre:not([class*="language-"]) {
+  margin: 0.5em 0;
+  line-height: 1.375; /* 22px /16 */
+  -moz-tab-size: var(--syntax-tab-size);
+  -o-tab-size: var(--syntax-tab-size);
+  tab-size: var(--syntax-tab-size);
+  -webkit-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+  direction: ltr;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  overflow-x: auto;
+}
+code {
+  word-break: break-all;
+}
+
+/* Header */
+header {
+  display: flex;
+  gap: 1em;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em;
+}
+.home-link {
+  flex-grow: 1;
+  font-size: 1em; /* 16px /16 */
+  font-weight: 700;
+}
+.home-link:link:not(:hover) {
+  text-decoration: none;
+}
+
+/* Nav */
+.nav {
+  display: flex;
+  gap: 0.5em 1em;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.nav-item {
+  display: inline-block;
+}
+.nav-item a[href]:not(:hover) {
+  text-decoration: none;
+}
+.nav a[href][aria-current="page"] {
+  text-decoration: underline;
+}
+
+/* Posts list */
+.postlist {
+  list-style: none;
+  padding: 0;
+  padding-left: 1.5rem;
+}
+.postlist-item {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  counter-increment: start-from -1;
+  margin-bottom: 1em;
+}
+.postlist-item:before {
+  display: inline-block;
+  pointer-events: none;
+  content: "" counter(start-from, decimal-leading-zero) ". ";
+  line-height: 100%;
+  text-align: right;
+  margin-left: -1.5rem;
+}
+.postlist-date,
+.postlist-item:before {
+  font-size: 0.8125em; /* 13px /16 */
+  color: var(--color-gray-90);
+}
+.postlist-date {
+  word-spacing: -0.5px;
+}
+.postlist-link {
+  font-size: 1.1875em; /* 19px /16 */
+  font-weight: 700;
+  flex-basis: calc(100% - 1.5rem);
+  padding-left: 0.25em;
+  padding-right: 0.5em;
+  text-underline-position: from-font;
+  text-underline-offset: 0;
+  text-decoration-thickness: 1px;
+}
+.postlist-item-active .postlist-link {
+  font-weight: bold;
+}
+
+/* Tags */
+.post-tag {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: capitalize;
+  font-style: italic;
+}
+.postlist-item > .post-tag {
+  align-self: center;
+}
+
+/* Tags list */
+.post-metadata {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 0.5em;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.post-metadata time {
+  margin-right: 1em;
+}
+
+/* Базовая стилизация таблицы */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  background-color: #fff;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial,
+    sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #24292f;
+  margin-bottom: 16px;
+  overflow: auto;
+  display: block;
+}
+
+/* Хедер — теперь более тёмный */
+table thead {
+  background-color: #d0d7de; /* Темнее, чем #f6f8fa */
+}
+
+table th,
+table td {
+  border: 1px solid #d0d7de;
+  padding: 8px 16px;
+  text-align: left;
+  vertical-align: top;
+}
+
+/* Моноширинный стиль для чисел и кода */
+table td code,
+table th code {
+  font-family: SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace;
+  background-color: rgba(175, 184, 193, 0.2);
+  padding: 0.2em 0.4em;
+  border-radius: 6px;
+  font-size: 85%;
+}
+
+/* Зебра: 1-я строка — белая, 2-я — тёмная */
+table tbody tr:nth-child(even) {
+  background-color: #f6f8fa; /* Вторая, четная — тёмная */
+}
+
+table tbody tr:nth-child(odd) {
+  background-color: #ffffff; /* Первая, нечетная — белая */
+}
+
+/* Ховер-эффект */
+table tbody tr:hover {
+  background-color: #eaeef2;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  table {
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+}</style>
+  </head>
+    <body><a href="#skip" class="visually-hidden">Skip to main content</a>
+    <header>
+      <a href="/" class="home-link">Learn 🇬🇷 with me</a>
+      <nav>
+        <h2 class="visually-hidden" id="top-level-navigation-menu">Top level navigation menu</h2>
+        <ul class="nav">
+            <li class="nav-item">
+              <a href="/">Главная</a>
+            </li>
+            <li class="nav-item">
+              <a href="/blog/">Посты</a>
+            </li>
+            <li class="nav-item">
+              <a href="/about/">Что за сайт?</a>
+            </li>
+            <li class="nav-item">
+              <a href="/feed/feed.xml">RSS</a>
+            </li>
+        </ul>
+      </nav>
+    </header>
+    <main id="skip">
+      <heading-anchors>
+        
+<h1 id="ne-pravilniy-glagoly">Не правильный глаголы</h1>
+
+<ul class="post-metadata">
+	<li><time datetime="2025-04-25">25 April 2025</time></li>
+	<li><a href="/tags/grammar/" class="post-tag">#grammar</a>, </li>
+	<li><a href="/tags/verbs/" class="post-tag">verbs</a></li>
+</ul>
+
+<blockquote>
+<p><strong>Неправильные глаголы</strong> — это глаголы, <strong>у которых при спряжении по временам происходят отклонения от стандартных (регулярных) моделей</strong>, особенно:</p>
+</blockquote>
+<ul>
+<li>меняется <strong>основа</strong> (корень)</li>
+<li>используются <strong>нестандартные окончания</strong></li>
+<li>нарушаются <strong>общие закономерности ударения и формы</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th><strong>Present</strong></th>
+<th><strong>Past</strong></th>
+<th><strong>Future</strong></th>
+<th><strong>Russian</strong></th>
+<th><strong>English</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[[είμαι]]</td>
+<td>ήμουν</td>
+<td>είμαι</td>
+<td>быть</td>
+<td>be</td>
+</tr>
+<tr>
+<td>[[έχω]]</td>
+<td>είχα</td>
+<td>έχω</td>
+<td>иметь</td>
+<td>have</td>
+</tr>
+<tr>
+<td>[[κάνω]]</td>
+<td>έκανα</td>
+<td>κάνω</td>
+<td>делать</td>
+<td>do</td>
+</tr>
+<tr>
+<td>[[λέω]]</td>
+<td>είπα</td>
+<td>πω</td>
+<td>говорить</td>
+<td>say</td>
+</tr>
+<tr>
+<td>[[βλέπω]]</td>
+<td>είδα</td>
+<td>δω</td>
+<td>видеть</td>
+<td>see</td>
+</tr>
+<tr>
+<td>[[πηγαίνω]]</td>
+<td>πήγα</td>
+<td>πάω</td>
+<td>идти</td>
+<td>go</td>
+</tr>
+<tr>
+<td>[[έρχομαι]]</td>
+<td>ήρθα</td>
+<td>έρθω</td>
+<td>приходить</td>
+<td>come</td>
+</tr>
+<tr>
+<td>[[τρώω]]</td>
+<td>έφαγα</td>
+<td>φάω</td>
+<td>есть</td>
+<td>eat</td>
+</tr>
+<tr>
+<td>[[δίνω]]</td>
+<td>έδωσα</td>
+<td>δώσω</td>
+<td>давать</td>
+<td>give</td>
+</tr>
+<tr>
+<td>[[παίρνω]]</td>
+<td>πήρα</td>
+<td>πάρω</td>
+<td>брать</td>
+<td>take</td>
+</tr>
+<tr>
+<td>[[βρίσκω]]</td>
+<td>βρήκα</td>
+<td>βρω</td>
+<td>находить</td>
+<td>find</td>
+</tr>
+<tr>
+<td>[[καταλαβαίνω]]</td>
+<td>κατάλαβα</td>
+<td>καταλάβω</td>
+<td>понимать</td>
+<td>understand</td>
+</tr>
+<tr>
+<td>[[μαθαίνω]]</td>
+<td>έμαθα</td>
+<td>μάθω</td>
+<td>учить</td>
+<td>learn</td>
+</tr>
+<tr>
+<td>[[μένω]]</td>
+<td>έμεινα</td>
+<td>μείνω</td>
+<td>оставаться</td>
+<td>stay</td>
+</tr>
+<tr>
+<td>[[ξέρω]]</td>
+<td>ήξερα</td>
+<td>ξέρω</td>
+<td>знать</td>
+<td>know</td>
+</tr>
+<tr>
+<td>[[γράφω]]</td>
+<td>έγραψα</td>
+<td>γράψω</td>
+<td>писать</td>
+<td>write</td>
+</tr>
+<tr>
+<td>[[οδηγώ]]</td>
+<td>οδήγησα</td>
+<td>οδηγήσω</td>
+<td>водить</td>
+<td>drive</td>
+</tr>
+<tr>
+<td>[[κρατάω]]</td>
+<td>κράτησα</td>
+<td>κρατήσω</td>
+<td>держать</td>
+<td>hold</td>
+</tr>
+<tr>
+<td>[[κοιτάζω]]</td>
+<td>κοίταξα</td>
+<td>κοιτάξω</td>
+<td>смотреть</td>
+<td>look</td>
+</tr>
+<tr>
+<td>[[γίνομαι]]</td>
+<td>έγινα</td>
+<td>γίνω</td>
+<td>становиться</td>
+<td>become</td>
+</tr>
+<tr>
+<td>[[ακούω]]</td>
+<td>άκουσα</td>
+<td>ακούσω</td>
+<td>слышать</td>
+<td>hear</td>
+</tr>
+<tr>
+<td>[[φεύγω]]</td>
+<td>έφυγα</td>
+<td>φύγω</td>
+<td>уходить</td>
+<td>leave</td>
+</tr>
+<tr>
+<td>[[μπαίνω]]</td>
+<td>μπήκα</td>
+<td>μπω</td>
+<td>входить</td>
+<td>enter</td>
+</tr>
+<tr>
+<td>[[βγαίνω]]</td>
+<td>βγήκα</td>
+<td>βγω</td>
+<td>выходить</td>
+<td>exit</td>
+</tr>
+<tr>
+<td>[[ανεβαίνω]]</td>
+<td>ανέβηκα</td>
+<td>ανεβώ</td>
+<td>подниматься</td>
+<td>ascend</td>
+</tr>
+<tr>
+<td>[[κατεβαίνω]]</td>
+<td>κατέβηκα</td>
+<td>κατεβώ</td>
+<td>спускаться</td>
+<td>descend</td>
+</tr>
+<tr>
+<td>[[νιώθω]]</td>
+<td>ένιωσα</td>
+<td>νιώσω</td>
+<td>чувствовать</td>
+<td>feel</td>
+</tr>
+<tr>
+<td>[[ζητάω]]</td>
+<td>ζήτησα</td>
+<td>ζητήσω</td>
+<td>просить</td>
+<td>ask</td>
+</tr>
+<tr>
+<td>[[κοιμάμαι]]</td>
+<td>κοιμήθηκα</td>
+<td>κοιμηθώ</td>
+<td>спать</td>
+<td>sleep</td>
+</tr>
+<tr>
+<td>[[γελάω]]</td>
+<td>γέλασα</td>
+<td>γελάσω</td>
+<td>смеяться</td>
+<td>laugh</td>
+</tr>
+<tr>
+<td>[[πονάω]]</td>
+<td>πόνεσα</td>
+<td>πονέσω</td>
+<td>болеть</td>
+<td>hurt</td>
+</tr>
+<tr>
+<td>[[στέλνω]]</td>
+<td>έστειλα</td>
+<td>στείλω</td>
+<td>отправлять</td>
+<td>send</td>
+</tr>
+<tr>
+<td>[[πεθαίνω]]</td>
+<td>πέθανα</td>
+<td>πεθάνω</td>
+<td>умирать</td>
+<td>die</td>
+</tr>
+<tr>
+<td>[[κλαίω]]</td>
+<td>έκλαψα</td>
+<td>κλάψω</td>
+<td>плакать</td>
+<td>cry</td>
+</tr>
+<tr>
+<td>[[σηκώνομαι]]</td>
+<td>σηκώθηκα</td>
+<td>σηκωθώ</td>
+<td>вставать</td>
+<td>get up</td>
+</tr>
+<tr>
+<td>[[θυμάμαι]]</td>
+<td>θυμήθηκα</td>
+<td>θυμηθώ</td>
+<td>помнить</td>
+<td>remember</td>
+</tr>
+<tr>
+<td>[[ξεχνάω]]</td>
+<td>ξέχασα</td>
+<td>ξεχάσω</td>
+<td>забывать</td>
+<td>forget</td>
+</tr>
+<tr>
+<td>[[φοράω]]</td>
+<td>φόρεσα</td>
+<td>φορέσω</td>
+<td>надевать</td>
+<td>wear</td>
+</tr>
+<tr>
+<td>[[λέγομαι]]</td>
+<td>λεγόμουν</td>
+<td>ονομαστώ</td>
+<td>называться</td>
+<td>be called</td>
+</tr>
+<tr>
+<td>[[κάθομαι]]</td>
+<td>κάθισα</td>
+<td>καθίσω</td>
+<td>сидеть</td>
+<td>sit</td>
+</tr>
+<tr>
+<td>[[πληρώνω]]</td>
+<td>πλήρωσα</td>
+<td>πληρώσω</td>
+<td>платить</td>
+<td>pay</td>
+</tr>
+<tr>
+<td>[[δουλεύω]]</td>
+<td>δούλεψα</td>
+<td>δουλέψω</td>
+<td>работать</td>
+<td>work</td>
+</tr>
+<tr>
+<td>[[ανοίγω]]</td>
+<td>άνοιξα</td>
+<td>ανοίξω</td>
+<td>открывать</td>
+<td>open</td>
+</tr>
+<tr>
+<td>[[κλείνω]]</td>
+<td>έκλεισα</td>
+<td>κλείσω</td>
+<td>закрывать</td>
+<td>close</td>
+</tr>
+<tr>
+<td>[[πλένω]]</td>
+<td>έπλυνα</td>
+<td>πλύνω</td>
+<td>мыть</td>
+<td>wash</td>
+</tr>
+<tr>
+<td>[[φέρνω]]</td>
+<td>έφερα</td>
+<td>φέρω</td>
+<td>приносить</td>
+<td>bring</td>
+</tr>
+<tr>
+<td>[[διαβάζω]]</td>
+<td>διάβασα</td>
+<td>διαβάσω</td>
+<td>читать</td>
+<td>read</td>
+</tr>
+<tr>
+<td>[[παίζω]]</td>
+<td>έπαιξα</td>
+<td>παίξω</td>
+<td>играть</td>
+<td>play</td>
+</tr>
+<tr>
+<td>[[αγοράζω]]</td>
+<td>αγόρασα</td>
+<td>αγοράσω</td>
+<td>покупать</td>
+<td>buy</td>
+</tr>
+<tr>
+<td>[[χάνω]]</td>
+<td>έχασα</td>
+<td>χάσω</td>
+<td>терять</td>
+<td>lose</td>
+</tr>
+<tr>
+<td>[[κερδίζω]]</td>
+<td>κέρδισα</td>
+<td>κερδίσω</td>
+<td>выигрывать</td>
+<td>win</td>
+</tr>
+<tr>
+<td>[[δείχνω]]</td>
+<td>έδειξα</td>
+<td>δείξω</td>
+<td>показывать</td>
+<td>show</td>
+</tr>
+<tr>
+<td>[[ανεβάζω]]</td>
+<td>ανέβασα</td>
+<td>ανεβάσω</td>
+<td>поднимать</td>
+<td>lift</td>
+</tr>
+<tr>
+<td>[[κατεβάζω]]</td>
+<td>κατέβασα</td>
+<td>κατεβάσω</td>
+<td>опускать</td>
+<td>drop</td>
+</tr>
+<tr>
+<td>[[σπάω]]</td>
+<td>έσπασα</td>
+<td>σπάσω</td>
+<td>ломать</td>
+<td>break</td>
+</tr>
+<tr>
+<td>[[φωνάζω]]</td>
+<td>φώναξα</td>
+<td>φωνάξω</td>
+<td>кричать</td>
+<td>shout</td>
+</tr>
+<tr>
+<td>[[περιμένω]]</td>
+<td>περίμενα</td>
+<td>περιμένω</td>
+<td>ждать</td>
+<td>wait</td>
+</tr>
+<tr>
+<td>[[γιορτάζω]]</td>
+<td>γιόρτασα</td>
+<td>γιορτάσω</td>
+<td>праздновать</td>
+<td>celebrate</td>
+</tr>
+<tr>
+<td>[[πιστεύω]]</td>
+<td>πίστεψα</td>
+<td>πιστέψω</td>
+<td>верить</td>
+<td>believe</td>
+</tr>
+<tr>
+<td>[[μαγειρεύω]]</td>
+<td>μαγείρεψα</td>
+<td>μαγειρέψω</td>
+<td>готовить</td>
+<td>cook</td>
+</tr>
+<tr>
+<td>[[καθαρίζω]]</td>
+<td>καθάρισα</td>
+<td>καθαρίσω</td>
+<td>чистить</td>
+<td>clean</td>
+</tr>
+<tr>
+<td>[[διδάσκω]]</td>
+<td>δίδαξα</td>
+<td>διδάξω</td>
+<td>преподавать</td>
+<td>teach</td>
+</tr>
+<tr>
+<td>[[αλλάζω]]</td>
+<td>άλλαξα</td>
+<td>αλλάξω</td>
+<td>менять</td>
+<td>change</td>
+</tr>
+<tr>
+<td>[[σταματάω]]</td>
+<td>σταμάτησα</td>
+<td>σταματήσω</td>
+<td>останавливать</td>
+<td>stop</td>
+</tr>
+<tr>
+<td>[[περνάω]]</td>
+<td>πέρασα</td>
+<td>περάσω</td>
+<td>проходить</td>
+<td>pass</td>
+</tr>
+<tr>
+<td>[[φεύγω]]</td>
+<td>έφυγα</td>
+<td>φύγω</td>
+<td>уходить</td>
+<td>leave</td>
+</tr>
+<tr>
+<td>[[χαμογελάω]]</td>
+<td>χαμογέλασα</td>
+<td>χαμογελάσω</td>
+<td>улыбаться</td>
+<td>smile</td>
+</tr>
+<tr>
+<td>[[ρωτάω]]</td>
+<td>ρώτησα</td>
+<td>ρωτήσω</td>
+<td>спрашивать</td>
+<td>ask</td>
+</tr>
+<tr>
+<td>[[απαντάω]]</td>
+<td>απάντησα</td>
+<td>απαντήσω</td>
+<td>отвечать</td>
+<td>answer</td>
+</tr>
+<tr>
+<td>[[ταξιδεύω]]</td>
+<td>ταξίδεψα</td>
+<td>ταξιδέψω</td>
+<td>путешествовать</td>
+<td>travel</td>
+</tr>
+<tr>
+<td>[[φτιάχνω]]</td>
+<td>έφτιαξα</td>
+<td>φτιάξω</td>
+<td>чинить</td>
+<td>fix</td>
+</tr>
+<tr>
+<td>[[προσέχω]]</td>
+<td>πρόσεξα</td>
+<td>προσέξω</td>
+<td>заботиться</td>
+<td>care</td>
+</tr>
+<tr>
+<td>[[καίω]]</td>
+<td>έκαψα</td>
+<td>κάψω</td>
+<td>жечь</td>
+<td>burn</td>
+</tr>
+<tr>
+<td>[[νικάω]]</td>
+<td>νίκησα</td>
+<td>νικήσω</td>
+<td>побеждать</td>
+<td>defeat</td>
+</tr>
+<tr>
+<td>[[δανείζω]]</td>
+<td>δάνεισα</td>
+<td>δανείσω</td>
+<td>одалживать</td>
+<td>lend</td>
+</tr>
+<tr>
+<td>[[σβήνω]]</td>
+<td>έσβησα</td>
+<td>σβήσω</td>
+<td>гасить</td>
+<td>extinguish</td>
+</tr>
+<tr>
+<td>[[γεμίζω]]</td>
+<td>γέμισα</td>
+<td>γεμίσω</td>
+<td>наполнять</td>
+<td>fill</td>
+</tr>
+<tr>
+<td>[[αδειάζω]]</td>
+<td>άδειασα</td>
+<td>αδειάσω</td>
+<td>опустошать</td>
+<td>empty</td>
+</tr>
+<tr>
+<td>[[κρύβω]]</td>
+<td>έκρυψα</td>
+<td>κρύψω</td>
+<td>прятать</td>
+<td>hide</td>
+</tr>
+<tr>
+<td>[[χτυπάω]]</td>
+<td>χτύπησα</td>
+<td>χτυπήσω</td>
+<td>бить</td>
+<td>hit</td>
+</tr>
+<tr>
+<td>[[σηκώνω]]</td>
+<td>σήκωσα</td>
+<td>σηκώσω</td>
+<td>поднимать</td>
+<td>raise</td>
+</tr>
+<tr>
+<td>[[πετάω]]</td>
+<td>πέταξα</td>
+<td>πετάξω</td>
+<td>бросать</td>
+<td>throw</td>
+</tr>
+<tr>
+<td>[[γυρίζω]]</td>
+<td>γύρισα</td>
+<td>γυρίσω</td>
+<td>возвращать</td>
+<td>return</td>
+</tr>
+<tr>
+<td>[[λύνω]]</td>
+<td>έλυσα</td>
+<td>λύσω</td>
+<td>решать</td>
+<td>solve</td>
+</tr>
+<tr>
+<td>[[παθαίνω]]</td>
+<td>έπαθα</td>
+<td>πάθω</td>
+<td>терпеть</td>
+<td>suffer</td>
+</tr>
+<tr>
+<td>[[τραγουδάω]]</td>
+<td>τραγούδησα</td>
+<td>τραγουδήσω</td>
+<td>петь</td>
+<td>sing</td>
+</tr>
+<tr>
+<td>[[σφυρίζω]]</td>
+<td>σφύριξα</td>
+<td>σφυρίξω</td>
+<td>свистеть</td>
+<td>whistle</td>
+</tr>
+<tr>
+<td>[[φυσάω]]</td>
+<td>φύσηξα</td>
+<td>φυσήξω</td>
+<td>дуть</td>
+<td>blow</td>
+</tr>
+<tr>
+<td>[[βάζω]]</td>
+<td>έβαλα</td>
+<td>βάλω</td>
+<td>класть</td>
+<td>put</td>
+</tr>
+<tr>
+<td>[[ντύνω]]</td>
+<td>έντυσα</td>
+<td>ντύσω</td>
+<td>одевать</td>
+<td>dress</td>
+</tr>
+<tr>
+<td>[[ξεντύνω]]</td>
+<td>ξέντυσα</td>
+<td>ξεντύσω</td>
+<td>раздевать</td>
+<td>undress</td>
+</tr>
+<tr>
+<td>[[δένω]]</td>
+<td>έδεσα</td>
+<td>δέσω</td>
+<td>связывать</td>
+<td>tie</td>
+</tr>
+<tr>
+<td>[[λούζω]]</td>
+<td>έλουσα</td>
+<td>λούσω</td>
+<td>мыть (волосы)</td>
+<td>shampoo</td>
+</tr>
+<tr>
+<td>[[ιδρώνω]]</td>
+<td>ίδρωσα</td>
+<td>ιδρώσω</td>
+<td>потеть</td>
+<td>sweat</td>
+</tr>
+<tr>
+<td>[[παγώνω]]</td>
+<td>πάγωσα</td>
+<td>παγώσω</td>
+<td>замерзать</td>
+<td>freeze</td>
+</tr>
+<tr>
+<td>[[λιώνω]]</td>
+<td>έλιωσα</td>
+<td>λιώσω</td>
+<td>таять</td>
+<td>melt</td>
+</tr>
+<tr>
+<td>[[πονηρεύομαι]]</td>
+<td>πονηρεύτηκα</td>
+<td>πονηρευτώ</td>
+<td>хитрить</td>
+<td>scheme</td>
+</tr>
+<tr>
+<td>[[τραβάω]]</td>
+<td>τράβηξα</td>
+<td>τραβήξω</td>
+<td>тянуть</td>
+<td>pull</td>
+</tr>
+<tr>
+<td>[[σπρώχνω]]</td>
+<td>έσπρωξα</td>
+<td>σπρώξω</td>
+<td>толкать</td>
+<td>push</td>
+</tr>
+</tbody>
+</table>
+
+<ul class="links-nextprev"><li class="links-nextprev-prev">← Previous<br> <a href="/blog/rules/article/">Артикль</a></li><li class="links-nextprev-next">Next →<br><a href="/blog/rules/verbs-ab/">Глаголы AB</a></li>
+</ul>
+
+      </heading-anchors>
+    </main>
+    <footer>
+      <p>
+        <em>Остались вопросы? смело пиши мне в 👉
+          <a href="https://t.me/isuvorov" target="_blank" rel="noopener noreferrer">
+            Telegram
+          </a>
+        </em>
+      </p>
+    </footer>
+    <!-- This page `/blog/rules/irregular-verbs/` was built on 2025-04-25T08:01:31.159Z -->
+    <script type="module" src="/dist/xbxy_EL6cU.js"></script>
+  </body>
+</html>
