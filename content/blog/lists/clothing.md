@@ -3,7 +3,7 @@ title: Clothing list
 tags:
   - "#clothing"
   - "#list"
-date: 2025-04-15
+date: 2025-05-01
 ---
 
 | **Art** | **Word**      | **Pronunciation** | **English**   | **Russian**      |
