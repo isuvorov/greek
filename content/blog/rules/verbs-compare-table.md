@@ -1,5 +1,5 @@
 ---
-title: Глаголы
+title: Глаголы (таблица)
 tags:
   - "#grammar"
   - verbs

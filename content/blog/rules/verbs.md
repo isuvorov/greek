@@ -1,5 +1,5 @@
 ---
-title: Глаголы
+title: Типы глаголов
 tags:
   - "#grammar"
   - verbs

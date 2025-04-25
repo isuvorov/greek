@@ -1,5 +1,5 @@
 ---
-title: Артикль
+title: Артикль (таблицы)
 tags:
   - "#grammar"
   - "#article"
