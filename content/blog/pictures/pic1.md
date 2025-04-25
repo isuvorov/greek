@@ -5,7 +5,13 @@ tags:
   - "#list"
 date: 2025-05-01
 ---
-![[pic1.png]]
+
+<img src="./pic1.png" alt="Картинка 1" style="width: 100%; max-width: 600px; border-radius: 10px; margin-top: 20px;">
+
+Описание картинки на греческом языке с переводом на русский.
+
+Источник: [YouTube видео](https://www.youtube.com/watch?v=_qdhWXl8Ic0)
+
 
 ### **Вариант 1**
 
@@ -129,4 +135,5 @@ _Возможно, они поют вместе или слушают музык
 _Картинка очень красивая и показывает радостный момент._
 
 ----------------------
-Source: https://www.youtube.com/watch?v=_qdhWXl8Ic0
+
+Источник: [YouTube видео](https://www.youtube.com/watch?v=_qdhWXl8Ic0)
