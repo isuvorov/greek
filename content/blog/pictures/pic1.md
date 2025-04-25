@@ -1,11 +1,11 @@
 ---
-title: Activity list
+title: Описание изображения 1
 tags:
   - "#activity"
   - "#list"
 date: 2025-05-01
 ---
-![[Pasted image 20250424154312.png]]
+![[pic1.png]]
 
 ### **Вариант 1**
 
